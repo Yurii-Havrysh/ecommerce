@@ -1,0 +1,18 @@
+<header>
+    <div class="navbar navbar-dark" style="background-color: #084e7c;">
+        <div routerLink="/store" style="cursor: pointer;" class="navbar-brand align-item-center d-flex">
+            <i style="font-size: 40px;" class="fa-solid fa-house">&nbsp;</i>
+            <strong style="font-size: 30px;">Online store</strong>
+            <div #searchInput class="form-group">
+                <input type="text" [(ngModel)]="searchItem" (keyup)="search($event)" class="search-input" placeholder="search products">
+                <span class="fas fa-search search-icon"></span>
+                
+            </div>
+            
+        </div>
+        <button routerLink="store/cart" class="btn" style="background-color: #084e7c">
+            <i style="font-size: 30px;" class="fa-solid fa-cart-shopping"></i>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItems}}</div>
+        </button>
+    </div>
+</header>

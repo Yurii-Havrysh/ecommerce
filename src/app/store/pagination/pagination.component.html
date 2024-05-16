@@ -1,0 +1,18 @@
+<nav *ngIf="totalPages" aria-label="...">
+    <ul class="pagination">
+      <li class="page-item" [ngClass]="{disabled: currentPage === 1}" 
+        style="cursor: pointer">
+        <a class="page-link" (click)="pageClicked(currentPage -1 )" >Previous</a>
+      </li>
+      <li
+      (click)="pageClicked(page)" 
+      *ngFor="let page of pages" class="page-item" 
+      [ngClass]="{'active': page==currentPage}">
+        <a class="page-link" href="javascript:void(0)">{{page}}</a>
+      </li>
+      <li [ngClass]="{disabled: currentPage==totalPages}"  class="page-item" 
+        style="cursor: pointer">
+        <a class="page-link" (click)="pageClicked(currentPage + 1)" >Next</a>
+      </li>
+    </ul>
+  </nav>

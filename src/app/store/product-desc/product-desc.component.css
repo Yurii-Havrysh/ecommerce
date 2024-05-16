@@ -1,0 +1,12 @@
+img {
+    height: 300px;
+}
+.container {
+    width: 1600px;
+}
+.btn {
+    background-color: #084e7c;
+    border:#084e7c;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

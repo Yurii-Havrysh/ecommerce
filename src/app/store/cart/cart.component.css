@@ -1,0 +1,22 @@
+.card{
+    height: 60vh;
+    margin: 25px;
+    padding: 25px;
+}
+.center{
+    position: relative;
+    top: -35vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.center img {
+    width: 250px;
+}
+.center h4 {
+    margin-top: 20px;
+}
+tbody img {
+    width: 100px
+}
+

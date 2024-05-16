@@ -1,0 +1,16 @@
+.search-input {
+    border-radius: 5px;
+    width: 600px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.form-group {
+    display: flex;
+}
+.search-icon {
+    float: right;
+    margin-left: -30px;
+    margin-top: 15px;
+    position: relative;
+    color: blue;
+}

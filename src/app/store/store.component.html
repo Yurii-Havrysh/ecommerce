@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="container_header">
+            <select class="btn btn-primary" #chosenCategory (change)="onChange(chosenCategory.value)">
+                <option disabled selected >Select a category</option>
+                <option *ngFor="let category of categories">{{category}}</option>
+            </select>
+            <div class="btns">
+                <button class="btn btn-primary" (click)= "sortProductsAsc()">Price: High-Low</button>
+                <button class="btn btn-primary" (click)= "sortProductsDesc()">Price: Low-High</button>
+            </div>
+            
+    
+        </div>
+        <ng-container *ngFor="let product of filteredArray | slice: (currentPage - 1) * itemsPerPage : (currentPage-1) * itemsPerPage + itemsPerPage">
+            <div class="card col-md-3" >
+                <img src="{{product.image}}" > 
+                <h5 class="product-title" style="white-space: nowrap;overflow: hidden" >{{product.title}}</h5>   
+                
+                <p><strong>Price: </strong>{{product.price + '$'}}</p>
+                <a class="card-text" (click)='showProductDesc(product)'>Product Description</a>
+                <button class="btn btn-primary" (click)="addToCart(product)">Add to Bag</button>
+            </div>
+        </ng-container>
+    </div>
+    
+    <app-pagination class="pagination" 
+        [totalItems]="filteredArray.length"
+        [itemsPerPage]='itemsPerPage' 
+        [currentPage]="currentPage"
+        (onClick)="changePage($event)"   
+    ></app-pagination>
+</div>
+
+
+

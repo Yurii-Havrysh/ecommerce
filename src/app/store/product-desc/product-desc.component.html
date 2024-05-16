@@ -1,0 +1,10 @@
+<div class="container">
+    <button class="btn btn-primary" (click)="goBack()">Back</button>
+    <h1 style="white-space: nowrap;overflow: hidden">{{product?.title}}</h1> 
+    <h3>Category: {{product?.category}}</h3>
+    <img src="{{product?.image}}" >
+    <p>Description: {{product?.description}}</p>
+    <p>Rating: {{product?.rating.rate}} ({{product?.rating.count}})</p>
+    <p>Price: {{product?.price}}$</p> 
+    <button class="btn btn-primary" (click)="addToCart(product)">Add to Bag</button>
+</div>
