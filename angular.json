@@ -41,7 +41,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "docs/browser",
+            "outputPath": "docs",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -80,7 +80,14 @@
               "outputHashing": "all"
             },
             "development": {
-              "optimization": false,
+              "optimization": {
+                  "scripts": true,
+                  "styles": {
+                       "minify": true,
+                       "inlineCritical": false
+                       },
+                  "fonts": true
+              },
               "extractLicenses": false,
               "sourceMap": true,
               "styles": [
